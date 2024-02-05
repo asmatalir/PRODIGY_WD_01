@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        margin: 0;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      header {
+        background-color: #1a1a1a;
+        color: #fff;
+        padding: 15px;
+        position: fixed;
+        width: 100%;
+        z-index: 1000;
+        transition: background-color 0.3s, color 0.3s;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+      }
+
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .logo {
+        font-size: 1.8rem;
+        font-weight: bold;
+        color: #ffd700;
+      }
+
+      .nav-list {
+        list-style: none;
+        display: flex;
+        margin: 0;
+        padding: 0;
+      }
+
+      .nav-list li {
+        margin: 0 20px;
+      }
+
+      .nav-list a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 1.2rem;
+        transition: color 0.3s;
+      }
+
+      .nav-list a:hover {
+        color: #ffd700;
+      }
+
+      .scroll-active {
+        background-color: #333;
+      }
+    </style>
+    <script>
+      window.addEventListener("scroll", function () {
+        var header = document.querySelector("header");
+        header.classList.toggle("scroll-active", window.scrollY > 0);
+      });
+    </script>
+    <title>Interactive Navigation Menu</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="logo">Prodigy Infotech</div>
+        <ul class="nav-list">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Your page content goes here -->
+  </body>
+</html>
